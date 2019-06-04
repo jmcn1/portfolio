@@ -1,62 +1,212 @@
 @charset "utf-8";
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700italic);
-#all {
-    background-color: skyblue;
-    font-family: "Roboto Condensed";
-}
-#navbar {
-    margin-left: 20%;
-    margin-right: 20%;
+.wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    height: 100vh;
+    width: 105%;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: scroll;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+  }
+  
+  .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+  
+    /* For text formatting. */
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
-}
-
-a:link {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: white;
+    text-shadow: 0 0 5px #000;
+  }
+  .section2 {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+  
+    /* For text formatting. */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: white;
+  }
+  .section3 {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    width: auto;
+  height: auto;
+    /* For text formatting. */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+  }
+  .project-tile {
+      /* Needed for children to be absolutely positioned relative to the parent. */
+      position: relative;
+      /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+        width: auto;
+        height: auto;
+      /* For text formatting. */
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 5px #000;
+    }
+  .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+  }
+  
+  /* The styling for the static div. */
+  .static {
+    background: white;
+    height: auto;
+    width: auto;
+    color: black;
+  }
+  .static2 {
+    margin-top: 10%;
+    color: white;
+    height: auto;
+    width: auto;
+  }
+  
+  /* Sets the actual background images to adorable kitties. This part is crucial. */
+  .bg1::after {
+    background-image: url("https://www.newgenapps.com/hubfs/canvas/images/parallax/Website-Design-Background.png")>;  
+    background-size: cover;
+}
+  
+  .bg2::after {
+    background-image: url("https://www.newgenapps.com/hubfs/canvas/images/parallax/Website-Design-Background.png");
+    background-size: cover;
+  }
+#all {
+    background: url(https://www.newgenapps.com/hubfs/canvas/images/parallax/Website-Design-Background.png);
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+    height: 100%;
+    overflow: hidden;
+    padding: 10%;
+}
+a {
+    color: white;
+}
+a:link {
     text-decoration: none;
 }
 a:hover {
     color: blue;
 }
-#points {
-    color: white;
-    margin-top: 0px;
+
+#title {
     display: flex;
-    justify-content: space-between;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-.coin {
-    height: 20px;
-}
-#box {
-    margin-left: 20%;
-    margin-right: 20%;
-    height: auto;
     width: auto;
-    background-color: rgb(211, 68, 25);
-    color: rgb(252, 189, 166);
+    height: auto;
+    align-content: center;
+}
+#welcome-section {
+    color: white;
     text-align: center;
-    border-radius: 5px;
-    font-size: 200%;
-    position: relative;
+    
+    display: flex;
+
 }
-#small_box_upperleft {
-    background-color: rgb(252, 189, 166);
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 90%;
-    height: 4px;
-    width: 4px;
-    font-size: 1%;
+/*Added for menu button
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
     position: relative;
+    top: 0;
+    width: 100%;
+    margin-right: 5%;
+    padding: 1%;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: gray;
+    color: white;
+  }
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+/* Adding skill bars
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
 }
-#small_box_lowerleft {
-    background-color: rgb(252, 189, 166);
-    margin-top: 25px;
-    height: 4px;
-    width: 4px;
-    font-size: 1%;
-    position: relative;
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding: 10px; /* Add some padding */
+  color: white; /* White text color */
 }
+
+.html {width: 90%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 50%; background-color: #f44336;} /* Red */

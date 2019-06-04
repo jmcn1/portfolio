@@ -2,27 +2,60 @@
 <html id="all">
     <title>Portfolio - J. McNeilan</title>
     <head>
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <nav id="navbar">
-                <a href="#">Overview</a>
-                <a href="#">My Skills</a>
-                <a href="#">Links</a>
-                <a href="#">Contact Me</a>
-        </nav>
-        <div id="points">
-            <p>000000</p>
-            <p>
-                <img class="coin" src="https://purepng.com/public/uploads/large/purepng.com-gold-coinsflatcoinsroundmetalgoldclipart-1421526479662nhdhr.png">x99
-            </p>
-            <p>1-1</p>
-            <p>See below..</p>
-        </div>
-        <div id="box">
-            <section id="small_box_upperleft">a</section>
-            <p>My name is Jon McNeilan</p>
-            <section id="small_box_lowerleft">a</section>
-            <p>I am a full stack developer</p>
-        </div>
-    </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="java.js"></script>
+        <nav-fixed-top id="navbar">
+                <div class="topnav">
+                        <a href="#home" class="active">Jon McNeilan</a>
+                        <!-- Navigation links (hidden by default) -->
+                        <div id="myLinks">
+                              <a href="#Introduction">Introduction</a>  
+                              <a href="#Skills">My Skills</a>
+                            <a href="#">Projects</a>
+                            <a href="#">Contact Me</a>
+                        </div>
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+        </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <main class="wrapper">
+                <section id="welcome-section" class="section parallax bg1">
+                    <h1>My name is</h1>
+                    <h2>Jon McNeilan</h2>
+                    <h2>I am a full stack developer</h2>
+                </section>
+                <section id="Introduction" class="section2 static">
+                    <h1>Introduction:</h1>
+                    <p>Jon McNeilan is a new developer with 10+ years of experience across Computer System Validation and Quality Assurance in GMP.</p>
+                    <p>After serving in the US Army as an IT Specialist, working as a DOD Contractor, and for several GMP pharmaceutical manufacturing facilities, he has decided to purse a career as a Full Stack Developer.</p>
+                </section>
+                <section id="Skills" class="section3 parallax bg2">
+                    <h1>Skills</h1>
+                    <p>HTML</p>
+                    <div class="container">
+                        <div class="skills html">90%</div>
+                    </div>
+                    <p>CSS</p>
+                    <div class="container">
+                        <div class="skills css">80%</div>
+                    </div>
+                    <p>JavaScript</p>
+                    <div class="container">
+                        <div class="skills js">50%</div>
+                    </div> 
+                </section>
+                <section id="Skills" class="project-tile parallax bg2">
+                        <h1>Skills</h1>
+    </main>
+    <section id="projects">
+    "
+            <h1>Projects</h1>
+            <a id="profile-link" href="https://github.com/jmcn1" target="_blank">My Github</a>
+            <a class="project-tile" href="https://github.com/jmcn1/resume" target="_blank">My Resume</a>
+        </section>
 </html>
